@@ -11,11 +11,11 @@ public class App {
 		myList.insertFirst(78);
 		myList.insertFirst(11);
 		myList.insertLast(1111);
-		myList.insertLast(1111090);
+		myList.insertLast(9999);
 
 		
 		myList.displayList();
-
+		
 	}
 
 }
