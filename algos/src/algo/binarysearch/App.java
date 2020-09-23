@@ -5,9 +5,9 @@ public class App {
 	public static void main(String[] args) {
 		
 		
-		int[] arr = {2,11,32,55,64,78,91,102};
+		int[] arr = {2,11,32,55,64,78,91,102};		// HAS TO BE SORTED
 		
-		System.out.print(binarySearch(arr, 55));
+		System.out.print(recursiveBinarySearch(arr, 0, arr.length-1, 91 ));
 		
 	}
 	
@@ -40,4 +40,30 @@ public class App {
 		return -1;
 	}
 
+	
+	public static int recursiveBinarySearch(int[] a, int x, int y, int val) {
+		
+			
+		if(x>y) {
+			return -1;
+		}
+			
+		else {		
+			int t = (x+y)/2;
+			
+			if(a[t] == val) {
+				return t;
+			}
+			
+			else if(val>a[t]) {
+				return recursiveBinarySearch(a, t+1, y, val);
+			}
+			
+			else{
+				return recursiveBinarySearch(a, x, t-1, val);
+			}
+		}
+		
+	}
+	
 }
